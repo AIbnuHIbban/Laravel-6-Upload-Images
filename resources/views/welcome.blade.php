@@ -84,16 +84,14 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <form action="{{ url("upload") }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group">
+                    <label for="">Upload Images</label><br><br>
+                    <input type="file" class="form-control" name="images" required>
+                    </div><br>
+                    <button type="submit" class="btn btn-primary">Upload Gambar</button>
+                </form>
             </div>
         </div>
     </body>
